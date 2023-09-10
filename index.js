@@ -19,8 +19,8 @@ app.get("/api", (req, res) => {
   const currentDay = days[new Date().getDay()];
 
   const githubFileUrl =
-    "https://github.com/yourusername/yourrepository/blob/main/app.js";
-  const githubRepoUrl = "https://github.com/yourusername/yourrepository";
+    "https://github.com/Shelby243/zuriBackEnd/blob/main/index.js";
+  const githubRepoUrl = "https://github.com/Shelby243/zuriBackEnd";
 
   const data = {
     slack_name,
