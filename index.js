@@ -24,8 +24,8 @@ app.get("/api", (req, res) => {
 
   const data = {
     slack_name,
-    current_day_of_week: currentDay,
-    current_utc_time: currentUtcTime.toISOString(),
+    current_day: currentDay,
+    utc_time: currentUtcTime.toISOString(),
     track,
     github_file_url: githubFileUrl,
     github_repo_url: githubRepoUrl,
