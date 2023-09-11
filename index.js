@@ -5,11 +5,9 @@ app.get("/api", (req, res) => {
   const { slack_name, track } = req.query;
 
   const currentUtcTime = new Date();
-  const timeDifference = Math.floor(Math.random() * 5) - 2;
-  currentUtcTime.setMinutes(currentUtcTime.getMinutes() + timeDifference);
-  const formattedUtcTime = currentUtcTime
-    .toISOString()
-    .replace(/\.\d{3}Z$/, "Z");
+  // const timeDifference = Math.floor(Math.random() * 5) - 2;
+  // currentUtcTime.setMinutes(currentUtcTime.getMinutes() + timeDifference);
+  const formattedUtcTime = currentUtcTime.toISOString.slice(0, 19) + "Z";
   const days = [
     "Sunday",
     "Monday",
