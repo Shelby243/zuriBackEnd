@@ -7,6 +7,9 @@ app.get("/api", (req, res) => {
   const currentUtcTime = new Date();
   const timeDifference = Math.floor(Math.random() * 5) - 2;
   currentUtcTime.setMinutes(currentUtcTime.getMinutes() + timeDifference);
+  const formattedUtcTime = currentUtcTime
+    .toISOString()
+    .replace(/\.\d{3}Z$/, "Z");
   const days = [
     "Sunday",
     "Monday",
@@ -25,7 +28,7 @@ app.get("/api", (req, res) => {
   const data = {
     slack_name,
     current_day: currentDay,
-    utc_time: currentUtcTime.toISOString(),
+    utc_time: formattedUtcTime,
     track,
     github_file_url: githubFileUrl,
     github_repo_url: githubRepoUrl,
