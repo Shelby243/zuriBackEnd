@@ -9,15 +9,11 @@ Thia API create, read, update and delete a person
   - [Installation](#installation)
 - [Usage](#usage)
   - [Running the API Locally](#running-the-api-locally)
-  - [API Endpoints](#api-endpoints)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
 - Click on the link of the source
-- Get the code in order to clone it
+- Get the ssh or http link code in order to clone it
 
 ### Prerequisites
 
@@ -97,16 +93,22 @@ npm -v
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/your-api.git
+   git clone https://github.com/Shelby243/zuriBackEnd.git
    ```
 
 2. Navigate to the project directory:
 
 ```sh
-cd your-api
+cd zuriBackEnd
 ```
 
-3. Install the required npm packages:
+3. Switch the branch :
+
+```sh
+git checkout stage2
+```
+
+4. Install the required npm packages:
 
 ```sh
 npm install
@@ -116,6 +118,17 @@ npm install
 
 - create .env file
 - provide MONGO_URL key if you have one in order to be connected in Mongo DB
+- provide this in .env for using morgan library:
+
+```sh
+NODE_ENV = development
+```
+
+5. Run The API:
+
+```sh
+npm start
+```
 
 ### Usage
 
@@ -184,7 +197,8 @@ By default, the API will be available at `http://localhost:5200`.
 
 ```sh
 {
-  "country": "Canada"
+  "country": "Canada",
+  "track":"FullStack Development",
 }
 ```
 
@@ -222,7 +236,17 @@ By default, the API will be available at `http://localhost:5200`.
 }
 ```
 
-### Testing
+### source code
 
-- Use postman or install thunder client on vscode
-- use different url for each operation by taking base url like this : `http://localhost:5200/`
+`https://github.com/Shelby243/zuriBackEnd/tree/stage2`
+
+### UML DIAGRAM LINK
+
+`https://app.creately.com/d/AZc2gx340vv/edit`
+
+44.226.145.213
+54.187.200.255
+34.213.214.55
+35.164.95.156
+44.230.95.183
+44.229.200.200
