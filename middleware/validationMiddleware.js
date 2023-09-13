@@ -31,6 +31,6 @@ export const validateIdParam = withValidationErrors([
     const isValidId = mongoose.Types.ObjectId.isValid(value);
     if (!isValidId) throw new BadRequestError("invalid MongoDB id");
     const person = await Person.findById(value);
-    if (!person) throw new NotFoundError(`no job with id ${value}`);
+    if (!person) throw new NotFoundError(`no person with id ${value}`);
   }),
 ]);
